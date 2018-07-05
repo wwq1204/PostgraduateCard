@@ -1,0 +1,142 @@
+page{
+    background: #efeff4;
+}
+.container2{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50rpx 0;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    background: #efeff4;
+    font-family: '微软雅黑';
+}
+.col{
+    width: 90%;
+    padding-top: 33%;
+    margin: 25rpx 3.666666%;
+    position: relative;
+    margin-top:10rpx;
+}
+.item{
+    width: 100%;
+    height: 100%;
+    border-radius: 20rpx;
+    overflow: hidden;
+    position: absolute;
+    box-sizing: border-box;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+}
+.item .content{
+    flex: 1;
+}
+.item .content,
+.item .bottom{
+    display: flex;
+    flex-flow:row nowrap;
+    align-items:center;
+    justify-content:center;
+}
+.item .bottom{
+    height: 80rpx;
+    background: #a8c0f0;
+    font-size: 22rpx;
+    
+}
+.item  .txt{
+    flex: 1;
+    text-align: center;
+}
+.item .content .txt{
+    padding: 0 5%;
+    font-size: 30rpx;
+    overflow:hidden; 
+    text-overflow:ellipsis;
+    display:-webkit-box; 
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:3; 
+    display:box;
+}
+.item .bottom .txt{
+    color: #fff;
+    font-size:30rpx;
+}
+.item.notepad{
+    background: #fff;
+}
+.item.today{
+    background: #fde3d5;
+}
+.item.yesterday{
+    background: #d5effd;
+}
+.add_box,
+.item.more{
+    border: 6rpx dotted #d9d9d9;
+}
+.add_box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tips_box{
+    position: relative;
+}
+.tips_icon{
+    position: absolute;
+    top:-60rpx;
+}
+.item.more{
+    background: url(../../images/more.png) no-repeat center center;
+    background-size: 60%;
+}
+.tips{
+    position: absolute;
+    z-index: 9;
+    right: -20rpx;
+    bottom: -140rpx;
+}
+.tips_txt{
+    width: 300rpx;
+    font-size: 32rpx;
+    padding: 30rpx 2px;
+    text-align: center;
+    background: #fff;
+    border-radius:14rpx; 
+}
+.tips_icon{
+    width: 70rpx;
+    height: 70rpx;
+    margin-left: 30rpx;
+    background-size:100%; 
+}
+.touch-item {
+ font-size: 14px;
+ display: flex;
+ justify-content: space-between;
+ border-bottom:1px solid #ccc;
+ width: 100%;
+ overflow: hidden
+}
+.del {
+ background-color: orangered;
+ width: 90px;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ color: #fff;
+ -webkit-transform: translateX(90px);
+ transform: translateX(90px);
+ -webkit-transition: all 0.4s;
+ transition: all 0.4s;
+}
+.touch-move-active .content,
+.touch-move-active .del {
+ -webkit-transform: translateX(0);
+ transform: translateX(0);
+} 

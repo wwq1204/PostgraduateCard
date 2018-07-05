@@ -1,0 +1,68 @@
+<!--index.wxml-->
+
+  <view class="jx_card1"  style="background-image:url({{backurl}})">
+      <text class="text_1">距离{{year}}考研还有：</text>
+      <text class="text_2">{{day}}</text>
+      <text class="text_3">天</text>
+      <text class="text_4">已签到{{count_day}}天</text>
+      <text class="text_5">我的积分：{{grade}}</text>
+      <image class="ima" src="../../images/222.png"></image>
+  </view>
+
+<button class="but_1" style="margin-top:10rpx" bindtap="countDay">
+   签到
+</button>
+
+<view >
+  <view class="tab-h">
+    <view class="record">我的签到记录</view>
+  </view>
+  <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab"   style="height:{{winHeight}}rpx">
+    <swiper-item wx:for="{{[0,1,2,3]}}">
+      <scroll-view scroll-y="true" class="scoll-h" >
+        <block wx:for="{{timeLists}}" wx:key="*this">
+          <view class="item-ans">
+              <view class="avatar">
+                <view wx:if="{{index%11 == 0}}"> 
+                  <image class="avatar" src="https://wx1.sinaimg.cn/mw690/8b336269ly1fsf5xqomcej2012012we9.jpg"></image> 
+                </view>
+                <view wx:elif="{{index%11 == 1}}"> 
+                  <image class="avatar" src="https://wx2.sinaimg.cn/mw690/8b336269ly1fsf5xqmlgfj2012012we9.jpg"></image> 
+                </view>
+                <view wx:elif="{{index%11 == 2}}"> 
+                  <image class="avatar" src="https://wx1.sinaimg.cn/thumb150/8b336269ly1fsf5xqoikjj20120123ya.jpg"></image> 
+                </view>
+                <view wx:elif="{{index%11 == 3}}"> 
+                  <image class="avatar" src="https://wx2.sinaimg.cn/mw690/8b336269ly1fsf5xqol48j2012012we9.jpg"></image> 
+                </view>
+                <view wx:elif="{{index%11 == 4}}"> 
+                  <image class="avatar" src="https://wx2.sinaimg.cn/mw690/8b336269ly1fsf5yjfa6lj2012012we9.jpg"></image> 
+                </view>
+                <view wx:elif="{{index%11 == 5}}"> 
+                  <image class="avatar" src="https://wx3.sinaimg.cn/mw690/8b336269ly1fsf5yjeqqmj2012012t8h.jpg"></image> 
+                </view>
+                <view wx:elif="{{index%11 == 6}}"> 
+                  <image class="avatar" src="https://wx1.sinaimg.cn/mw690/8b336269ly1fsf5yjfkfwj2012012dfl.jpg"></image> 
+                </view>
+                <view wx:elif="{{index%11 == 7}}"> 
+                  <image class="avatar" src="https://wx4.sinaimg.cn/mw690/8b336269ly1fsf5xqmz7sj2012012q2p.jpg"></image> 
+                </view>
+                <view wx:elif="{{index%11 == 8}}"> 
+                  <image class="avatar" src="https://wx3.sinaimg.cn/mw690/8b336269ly1fsf5yjjvvoj2012012gld.jpg"></image> 
+                </view>
+                <view wx:elif="{{index%11 == 9}}"> 
+                  <image class="avatar" src="https://wx2.sinaimg.cn/mw690/8b336269ly1fsf5xqol48j2012012we9.jpg"></image> 
+                </view>
+                <view wx:else> 
+                  <image class="avatar" src="https://wx3.sinaimg.cn/mw690/8b336269ly1fsf5yjdux3j2012012mwx.jpg"></image> 
+                </view>
+              </view>
+              <view class="expertInfo">
+                  <view class="name">{{item.time}}\t{{item.days}}</view>
+              </view>
+          </view>
+        </block>
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+</view>

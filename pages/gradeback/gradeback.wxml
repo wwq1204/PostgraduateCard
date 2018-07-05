@@ -1,0 +1,32 @@
+<!--pages/gradeback/gradeback.wxml-->
+<view class="text_card">
+  <text class="text1">点击图片使用默认背景</text>
+</view>
+<view class="jx_card" style="background-image:url(https://wx2.sinaimg.cn/mw690/8b336269ly1fslf4c3dz6j20af0690u2.jpg)"  bindtap="back">
+      </view>
+
+<view class="text_card">
+  <text class="text2">点击以下图片，使用100积分兑换首页背景</text>
+</view>
+
+<scroll-view scroll-y="true" class="scoll-h" >
+  <block wx:for="{{num}}" wx:key="*this">
+    <view  wx:if="{{index == 0}}">
+      <view class="jx_card" style="background-image:url(https://wx1.sinaimg.cn/mw690/8b336269ly1fslfkzrgnvj20af0690ts.jpg)">
+        <button class="buttonset" data-index="https://wx1.sinaimg.cn/mw690/8b336269ly1fslfkzrgnvj20af0690ts.jpg" bindtap="changeback"></button>
+      </view>
+    </view>
+
+    <view  wx:elif="{{index == 1}}">
+      <view class="jx_card" style="background-image:url(https://wx2.sinaimg.cn/mw690/8b336269ly1fslfkzqygbj20af0693za.jpg)">
+        <button class="buttonset" data-index="https://wx2.sinaimg.cn/mw690/8b336269ly1fslfkzqygbj20af0693za.jpg" bindtap="changeback"></button>
+      </view>
+    </view>
+
+    <view  wx:elif="{{index == 2}}">
+      <view class="jx_card" style="background-image:url(https://wx1.sinaimg.cn/mw690/8b336269ly1fslfkzty7xj20af069gop.jpg)">
+        <button class="buttonset" data-index="https://wx1.sinaimg.cn/mw690/8b336269ly1fslfkzty7xj20af069gop.jpg" bindtap="changeback"></button>
+      </view>
+    </view>
+  </block>
+</scroll-view>

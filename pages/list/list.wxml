@@ -1,0 +1,18 @@
+
+<view class="jx_card">
+  <navigator url="../diary/diary"> 
+    <image class="jx_image" src="https://wx2.sinaimg.cn/mw690/8b336269ly1frz2wl7uvwj20280280sj.jpg"></image>
+    <view class="vvview">
+      <text class="jx_text">戳我制定日计划</text>
+    </view>
+  </navigator>
+</view>
+
+<view class="jx_card">
+  <navigator url="../weeks/weeks"> 
+    <image class="jx_image" src="https://wx4.sinaimg.cn/mw690/8b336269ly1frz2wl7sd1j2028028mwy.jpg"></image>
+    <view class="vvview">
+      <text class="jx_text">戳我制定周计划</text>
+    </view>
+  </navigator>
+</view>

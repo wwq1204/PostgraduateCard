@@ -1,0 +1,11 @@
+<!--pages/login/login.wxml-->
+<view>
+  <picker bindchange="pickChange" value="{{index}}" range="{{array}}" >
+    <view class="text">
+       请选择考研年份：{{array[index]}}
+    </view>
+  </picker>
+  <view>
+      <button class="button" bindtap="saveData">确定</button>
+  </view>
+</view>
